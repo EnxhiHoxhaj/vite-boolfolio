@@ -1,15 +1,20 @@
-<script setup>
-
+<script>
+import Navbar from './components/partials/Navbar.vue';
+export default {
+  components:{
+    Navbar
+  }
+}
 </script>
 
 <template>
-  <router-view></router-view>
+    <div class="container">
+      <div>
+        <Navbar/>
+      </div>
 
-
-  <!-- <nav>
-    <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="/about">About</RouterLink>
-  </nav> -->
+      <router-view></router-view>
+    </div>
 </template>
 
 <style lang="sass" scoped>

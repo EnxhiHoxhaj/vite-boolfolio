@@ -1,19 +1,40 @@
 body{
-  background-color: #86ac8d;
+  background-color: rgb(77, 98, 77);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  color: #f6eee1 ;
+  color: #f6eee1;
+}
+
+h1 {
+  color: rgb(247, 168, 66)
 }
 
 .container {
   padding: 20px;
   border-style:double;
-  border-width: 10px;
-  color: #f6eee1;
+  border-width: 7px;
   border-radius: 10px;
+  min-width: 700px;
+  min-height: 200px;
+  position: relative;
+  border-color: rgb(247, 168, 66)
 
+}
+
+.ul-navbar {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  position: absolute;
+  right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #f6eee1;
 }

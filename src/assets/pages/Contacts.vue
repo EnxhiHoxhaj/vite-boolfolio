@@ -6,9 +6,9 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-        <h1>Contatti</h1>
-    </div>
+
+    <h1>Contatti</h1>
+
 
 </template>
 
