@@ -29,8 +29,10 @@ export default {
 {
     text-decoration: none;
     color: #f6eee1;
-    &:hover{
+    &:hover,
+    &.active{
         border-bottom: solid #f7a842;
+        color: #f7a842;
     }
 }
 </style>
