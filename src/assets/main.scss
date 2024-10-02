@@ -19,22 +19,8 @@ h1 {
   border-width: 7px;
   border-radius: 10px;
   min-width: 700px;
-  min-height: 200px;
+  min-height: 350px;
   position: relative;
-  border-color: rgb(247, 168, 66)
+  border-color: #f7a842;
 
-}
-
-.ul-navbar {
-  width: 300px;
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  position: absolute;
-  right: 20px;
-}
-
-a {
-  text-decoration: none;
-  color: #f6eee1;
 }

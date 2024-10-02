@@ -9,6 +9,6 @@ export default {
         <h1>Home</h1>
 </template>
 
-<style lang="sass" scoped>
+<style lang="scss" scoped>
 
 </style>
