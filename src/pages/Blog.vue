@@ -1,8 +1,12 @@
 <script>
 import axios from 'axios'
 import {store} from '../store/store';
+import Loders from './Loders.vue';
 
 export default {
+    components:{
+    Loders
+  },
     name: 'Blog',
     data(){
         return{
@@ -30,12 +34,14 @@ export default {
 </script>
 
 <template>
-
     <h1>Blog</h1>
     <h3>I miei post</h3>
-    <ul>
+    <div class="lod">
+        <Loders/>
+    </div>
+    <!-- <ul>
         <li v-for="post in posts" :key="post.id">{{ post.title }}</li>
-    </ul>
+    </ul> -->
 </template>
 
 <style lang="scss" scoped>
@@ -49,5 +55,9 @@ export default {
         list-style-type:square;
         list-style-position: inside;
         padding: 10px 0;
+    }
+    .lod {
+        display: flex;
+        justify-content: center;
     }
 </style>
