@@ -11,6 +11,7 @@ export default {
     data(){
         return{
             posts:[],
+            isLoading:true,
         }
     },
 
@@ -18,7 +19,9 @@ export default {
         getApi(){
             axios.get(store.apiUrl + 'posts')
             .then(result => {
-                this.posts= result.data.results.data
+
+                this.posts= result.data.results.data;
+                this.isLoading= false;
                 console.log(result.data.results.data);
             })
             .catch (error =>{
@@ -36,12 +39,12 @@ export default {
 <template>
     <h1>Blog</h1>
     <h3>I miei post</h3>
-    <div class="lod">
+    <div v-if="isLoading" class="lod">
         <Loders/>
     </div>
-    <!-- <ul>
+    <ul v-else>
         <li v-for="post in posts" :key="post.id">{{ post.title }}</li>
-    </ul> -->
+    </ul>
 </template>
 
 <style lang="scss" scoped>
