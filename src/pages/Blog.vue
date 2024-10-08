@@ -6,7 +6,7 @@ export default {
     name: 'Blog',
     data(){
         return{
-
+            posts:[],
         }
     },
 
@@ -14,7 +14,8 @@ export default {
         getApi(){
             axios.get(store.apiUrl + 'posts')
             .then(result => {
-                console.log(result.data);
+                this.posts= result.data
+                console.log(this.posts);
             })
             .catch (error =>{
                 console.log(error);
