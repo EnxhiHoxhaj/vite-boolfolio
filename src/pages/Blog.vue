@@ -14,8 +14,8 @@ export default {
         getApi(){
             axios.get(store.apiUrl + 'posts')
             .then(result => {
-                this.posts= result.data
-                console.log(this.posts);
+                this.posts= result.data.results.data
+                console.log(result.data.results.data);
             })
             .catch (error =>{
                 console.log(error);
@@ -32,13 +32,10 @@ export default {
 <template>
 
     <h1>Blog</h1>
-
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus laboriosam <br> 
-        reiciendis cum totam.Porro, modi. Maxime mollitia blanditiis dolore praesentium <br>
-        ad illum! Dolore provident ducimus doloribus? Maiores fugit et adipisci.
-    </p>
-
+    <h2>I miei post</h2>
+    <ul>
+        <li v-for="post in posts" :key="post.id">{{ post.title }}</li>
+    </ul>
 </template>
 
 <style lang="scss" scoped>
