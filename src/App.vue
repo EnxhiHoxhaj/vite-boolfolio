@@ -9,14 +9,12 @@ export default {
 
 <template>
     <div class="container">
-      <div>
+      <div class="top">
         <Navbar/>
       </div>
-
       <router-view></router-view>
     </div>
 </template>
 
-<style lang="sass" scoped>
-
+<style lang="scss" scoped>
 </style>
